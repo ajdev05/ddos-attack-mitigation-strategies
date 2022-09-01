@@ -1,4 +1,4 @@
-# ddos-attack-mitigation-steps
+# Guide, Please read.
 Mitigation of Distributed Denial of Service Attack on Virtual Private Severs, These are some of the steps that I take to secure my VPS and Mitigated any type of attacks on it.
 
 Read https://github.com/ajdev05/ddos-attack-mitigation-strategies/blob/main/ddos-mitigation-steps
