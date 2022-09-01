@@ -9,6 +9,7 @@ Make sure that you are logged in as 'root'
 
 ```
 apt update && apt upgrade
+
 apt install git
 
 git clone https://github.com/ajdev05/ddos-attack-mitigation-strategies
