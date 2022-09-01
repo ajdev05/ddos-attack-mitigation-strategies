@@ -5,7 +5,7 @@ Read https://github.com/ajdev05/ddos-attack-mitigation-strategies/blob/main/ddos
 
 Make sure that you are logged in as 'root' 
 
-Clone the project with:
+# Clone the project with:
 
 ```
 apt update && apt upgrade
