@@ -1,1 +1,158 @@
+Hello World!
 
+
+
+
+The point of this project is to help people learn a little about DDoS attacks, also known as Distributed Denial of Service Attacks.
+
+
+
+
+# Background
+
+These types of cyber attacks happen every second on the internet, and it's annoying because you might
+have heard that these types of attacks happen to big websites or that they only target big corporations' infrastructure,
+but that's not true at all! . DDoS attacks can target anything that has a public IP address, for example: websites, any type of server
+like a VPS server or game server, and people’s home WiFi. My first experience with this type of attack was when I was playing Xbox, yes Xbox! 
+At that time, Xbox had not implemented the use of dedicated servers on the Xbox Live party chat platform, and all the communication was done 
+peer-to-peer. So, if you were a bad guy on the internet and someone beat you in a video game, you could simply use a network monitoring tool 
+like Wireshark to capture traffic over UDP protocol and see all of the IP addresses of everyone in your Xbox Live party.After that, well, you know 
+what happened. The bad guy would either scare you off or he would try to overflood your router with invalid packets or a DDoS/DoS attack, which would
+result in your router trying to manage all of the incoming traffic and eventually it would deauth itself and you would have no internet.
+
+
+
+
+# DDoS vs. DoS
+
+
+A DoS, or Denial of Service, attack is when a single party or a single device tries to send you requests or packets 
+to overwhelm your server of any type. These types of attacks are usually UDP protocol-based attacks. From my experience 
+and testing on my servers, DoS attacks are usually not effective anymore against big infrastructure hosting companies because
+their basic firewalls are smart enough to ignore 2000 requests from one user, but some home Wifi connections can still be affected
+by over-flooding packets. This is because maybe they are still using old networking equipment and their infrastructure is not smart 
+enough to recognize a DoS attack.
+
+
+# DDoS
+
+
+ A Distributed Denial of Service attack, it's pretty self-explanatory, the attack is Distributed among other devices and together 
+ they all attack a target. A DDoS attack is usually carried out by or with a BotNet. A BotNet is an army of computers controlled by a
+ bad guy on the internet by putting malware on victims' devices, like computers, phones, and anything that has a connection to the internet 
+ or Bluetooth. BotNet malware like worms can spread themselves through a network and infect all of the devices that are connected to the 
+ internet and turn them into zombies or bots on a botnet. The bad guy has root access or full access to all of these devices, and the bad 
+ guy controls and sends commands to these devices through a CNC, also known as C2, also known as Command and Control. In a DDoS attack, this 
+ is what happens, when a BotNet user puts a command to launch a DDoS attack, that command goes to every device on that BotNet then instead of 
+ one device sending packets to a target, all of the devices start to send packets to the target which results in a better and more successful
+ deauthentication attack.
+
+
+
+# Types of Attacks
+
+
+
+
+ICMP flooding: The attacker floods a target with ICMP requests.
+
+
+
+
+UDP flooding: The attacker floods a target with UDP requests.
+
+
+
+
+SYN flooding: The attacker floods a target with TCP-based handshakes.
+
+
+
+
+NTP flooding: The attacker floods a target with amplifed UDP packets.
+
+
+
+
+HTTP flooding: The attacker floods a target with HTTP GET or POST requests to attack a web server or application.
+
+
+
+
+Most IaaS that provide DDoS protection have most of these attacks patched or filtered, but there are still some ways that are unknown or new.
+
+
+
+
+Zero-Day Attacks: Unknown attacks or different ways of attacking services
+
+
+
+
+# "Mitigation Practices"
+
+
+
+
+When there are two people talking at once, humans know to focus on one conversation and continue, but with computers, 
+it's different because they can’t think like us and avoid bad talk.
+
+Some ways to mitigate or dump traffic are:
+
+All are Ubuntu/Debian-based.
+
+
+
+
+UFW: Uncomplicated Firewall.
+
+limiting port traffic to the whole server with UFW
+
+
+
+
+Install UFW with apt install ufw
+
+UFW comes preloaded on Ubuntu distributions.
+
+
+
+
+To limit traffic commands
+
+ufw alllow from [your public IP address] to any port [your ssh port]
+
+EG: ufw allow traffic from 192.186.22.12 to any port 22
+
+
+
+
+Any traffic that's not from your IP address will go to your server's IP address and the port will be ignored.
+
+
+
+
+With UFW, you can also implement iptables. Iptables is a built-in firewall for Linux. With iptables, you can set your firewall 
+rules to ACCEPT or REJECT types of traffic from IPs, ports, protocols, etc. Sadly, I cannot cover IPTables fully. You may watch a
+video to understand them better, but I will put my firewall rules on the Github repository.
+
+
+
+
+When there is a DDoS attack, your server gets flooded with a lot of traffic from various different IP addresses, and one of the things 
+that I like to do is to block IP subnets that have engaged and are trying to send requests to my server's IP address on the port. It's not
+that common to see home service providers like Comcast, Charter, etc., send a lot of traffic to your server’s IP address and port because 
+DDoS is against most of their policies and also because people are also getting smarter by not opening miscellaneous files on their computers, 
+and many computers come with anti-virus software that prevents that from happening. So, rather than wasting their time, most bot-masters/DDoS for
+hire services, in my experience, use other VPS servers in their botnet to send attacks to targets. That's why it's good to block some cloud providers.
+My file will be in the GitHub repository.
+
+
+
+
+And this is it! If there are new things, I will be updating this GitHub repository.
+
+
+
+
+  
