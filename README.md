@@ -14,9 +14,12 @@ git clone https://github.com/ajdev05/ddos-attack-mitigation-strategies
 cd ddos-attack-mitigation-strategies
 
 chmod +x *
+```
 
 # Please Read 'rules.sh' and edit things
 
+```
 ./rules.sh
 
-./asn_subnet_blockage.sh ```
+./asn_subnet_blockage.sh
+```
