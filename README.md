@@ -7,7 +7,9 @@ Make sure that you are logged in as 'root'
 
 Clone the project with:
 
-```apt install git
+```
+apt update && apt upgrade
+apt install git
 
 git clone https://github.com/ajdev05/ddos-attack-mitigation-strategies
 
@@ -20,6 +22,7 @@ chmod +x *
 
 ```
 ./rules.sh
-
+```
+```
 ./asn_subnet_blockage.sh
 ```
