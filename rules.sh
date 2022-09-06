@@ -56,9 +56,9 @@ iptables -A INPUT -m recent --name portscan --rcheck --seconds 86400 -j DROP
 iptables -A FORWARD -m recent --name portscan --rcheck --seconds 86400 -j DROP
 iptables -A INPUT -m recent --name portscan --remove
 iptables -A FORWARD -m recent --name portscan --remove
-iptables -A INPUT -m recent --name portscan --set -j LOG --log-prefix "Portscan:"
+iptables -A INPUT -m recent --name portscan --set -j LOG --log-prefix "pscan:"
 iptables -A INPUT -m recent --name portscan --set -j DROP
-iptables -A FORWARD -m recent --name portscan --set -j LOG --log-prefix "Portscan:"
+iptables -A FORWARD -m recent --name portscan --set -j LOG --log-prefix "pscan:"
 iptables -A FORWARD -m recent --name portscan --set -j DROP
 iptables -A INPUT -p tcp --tcp-flags ACK,FIN FIN -j DROP
 iptables -A INPUT -p tcp --tcp-flags ACK,PSH PSH -j DROP
