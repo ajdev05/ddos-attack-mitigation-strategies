@@ -120,7 +120,7 @@ UFW comes preloaded on Ubuntu distributions.
 
 To limit traffic commands
 
-ufw alllow from [your public IP address] to any port [your ssh port]
+ufw allow from [your public IP address] to any port [your ssh port]
 
 EG: ufw allow traffic from 192.186.22.12 to any port 22
 
